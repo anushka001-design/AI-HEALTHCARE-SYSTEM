@@ -1,0 +1,317 @@
+/* Dashboard Styles */
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dashboard-header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-left h1 {
+  color: #667eea;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 2rem 0;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+  background: #667eea;
+  color: white;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Overview Panel */
+.overview-panel h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+}
+
+.stat-info h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #667eea;
+}
+
+.stat-info p {
+  margin: 0;
+  color: #666;
+}
+
+/* ChatBot Panel */
+.chatbot-panel {
+  background: white;
+  border-radius: 15px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: #667eea;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.message.bot .message-content {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.message.user .message-content {
+  background: #667eea;
+  color: white;
+}
+
+.chat-input-form {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 1rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+}
+
+.send-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Doctor Panel */
+.doctor-panel {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.panel-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: #667eea;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.doctor-card {
+  border: 2px solid #eee;
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.doctor-card:hover, .doctor-card.selected {
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.doctor-image {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.doctor-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.specialty {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.doctor-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.appointment-booking {
+  background: #f8f9ff;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.booking-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.time-slots {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.time-slot:hover, .time-slot.selected {
+  border-color: #667eea;
+  background: #667eea;
+  color: white;
+}
+
+.book-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.book-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.coming-soon {
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.coming-soon h2 {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
