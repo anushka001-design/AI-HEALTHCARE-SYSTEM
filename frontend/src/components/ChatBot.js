@@ -52,7 +52,7 @@ const ChatBot = () => {
           type="text"
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
-          placeholder="Describe your symptoms or ask a health question..."
+          placeholder="Tell me how you're feeling today..."
           className="chat-input"
         />
         <button type="submit" className="send-btn">Send</button>

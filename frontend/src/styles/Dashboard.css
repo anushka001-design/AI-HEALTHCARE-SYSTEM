@@ -1,132 +1,203 @@
 /* Dashboard Styles */
 .dashboard {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f8fafc;
+  position: relative;
 }
+
+
 
 .dashboard-header {
   background: white;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .header-left h1 {
-  color: #667eea;
+  color: #1e293b;
   margin: 0;
   font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .user-info {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: #64748b;
+  font-weight: 500;
 }
 
 .logout-btn {
-  background: #ff6b6b;
+  background: #ef4444;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
 }
 
 .dashboard-content {
   display: flex;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 90px);
 }
 
 .sidebar {
-  width: 250px;
-  background: white;
+  width: 300px;
+  background: #1e293b;
   padding: 2rem 0;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.nav-panels {
+  padding: 1rem;
 }
 
 .nav-item {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 0.5rem;
   border: none;
-  background: none;
+  background: transparent;
   display: flex;
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.2s ease;
+  color: #cbd5e1;
+  font-weight: 500;
+  border-radius: 8px;
 }
 
-.nav-item:hover, .nav-item.active {
-  background: #667eea;
+.nav-item:hover {
+  background: rgba(79, 70, 229, 0.2);
+  color: white;
+}
+
+.nav-item.active {
+  background: #4f46e5;
   color: white;
 }
 
 .nav-icon {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .main-content {
   flex: 1;
-  padding: 2rem;
+  padding: 3rem;
   overflow-y: auto;
+  background: white;
 }
 
 /* Overview Panel */
+.overview-panel {
+  /* No transform needed */
+}
+
 .overview-panel h2 {
-  color: white;
-  margin-bottom: 2rem;
+  color: #1e293b;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 
 .stat-card {
   background: white;
-  padding: 2rem;
-  border-radius: 15px;
+  padding: 3rem;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  gap: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.2s ease;
 }
 
+.stat-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+
+
 .stat-icon {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  padding: 1.5rem;
+  background: #f0f9ff;
+  border-radius: 10px;
 }
 
 .stat-info h3 {
   margin: 0;
-  font-size: 2rem;
-  color: #667eea;
+  font-size: 3rem;
+  color: #4f46e5;
+  font-weight: 700;
 }
 
 .stat-info p {
   margin: 0;
-  color: #666;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.coming-soon {
+  background: white;
+  border-radius: 10px;
+  padding: 4rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.coming-soon h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.coming-soon p {
+  color: #64748b;
+  font-size: 1.2rem;
 }
 
 /* ChatBot Panel */
 .chatbot-panel {
-  background: white;
-  border-radius: 15px;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border-radius: 10px;
   height: 80vh;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 2px solid #4f46e5;
 }
 
 .chat-header {
   padding: 1.5rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .chat-header h2 {
   margin: 0 0 0.5rem 0;
-  color: #667eea;
+  color: #4f46e5;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .chat-messages {
@@ -147,22 +218,22 @@
 .message-content {
   max-width: 70%;
   padding: 1rem;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .message.bot .message-content {
-  background: #f0f0f0;
+  background: #f1f5f9;
   color: #333;
 }
 
 .message.user .message-content {
-  background: #667eea;
+  background: #4f46e5;
   color: white;
 }
 
 .chat-input-form {
   padding: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e2e8f0;
   display: flex;
   gap: 1rem;
 }
@@ -170,30 +241,38 @@
 .chat-input {
   flex: 1;
   padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 25px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
   outline: none;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .send-btn {
-  background: #667eea;
+  background: #4f46e5;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 25px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.send-btn:hover {
+  background: #3730a3;
 }
 
 /* Doctor Panel */
 .doctor-panel {
   background: white;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
 }
 
 .panel-header h2 {
   margin: 0 0 0.5rem 0;
-  color: #667eea;
+  color: #4f46e5;
 }
 
 .doctors-grid {
@@ -204,16 +283,17 @@
 }
 
 .doctor-card {
-  border: 2px solid #eee;
-  border-radius: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
   padding: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.2s ease;
+  background: white;
 }
 
 .doctor-card:hover, .doctor-card.selected {
-  border-color: #667eea;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  border-color: #4f46e5;
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.2);
 }
 
 .doctor-image {
@@ -228,7 +308,7 @@
 }
 
 .specialty {
-  color: #667eea;
+  color: #4f46e5;
   font-weight: 500;
 }
 
@@ -241,9 +321,9 @@
 }
 
 .appointment-booking {
-  background: #f8f9ff;
+  background: #f8fafc;
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 8px;
   margin-top: 2rem;
 }
 
@@ -262,9 +342,10 @@
 .form-group input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
   outline: none;
+  background: white;
 }
 
 .time-slots {
@@ -275,43 +356,62 @@
 
 .time-slot {
   padding: 0.75rem 1.5rem;
-  border: 2px solid #ddd;
+  border: 2px solid #d1d5db;
   background: white;
-  border-radius: 25px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .time-slot:hover, .time-slot.selected {
-  border-color: #667eea;
-  background: #667eea;
+  border-color: #4f46e5;
+  background: #4f46e5;
   color: white;
 }
 
 .book-btn {
-  background: #667eea;
+  background: #4f46e5;
   color: white;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.3s;
+  transition: background-color 0.2s ease;
+}
+
+.book-btn:hover {
+  background: #3730a3;
 }
 
 .book-btn:disabled {
-  background: #ccc;
+  background: #9ca3af;
   cursor: not-allowed;
 }
 
-.coming-soon {
-  background: white;
-  border-radius: 15px;
-  padding: 3rem;
-  text-align: center;
+/* History Panel Background */
+.history-panel {
+  background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.coming-soon h2 {
-  color: #667eea;
-  margin-bottom: 1rem;
+.history-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.history-panel > * {
+  position: relative;
+  z-index: 2;
 }
